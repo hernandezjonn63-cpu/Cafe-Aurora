@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aurora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav class="navegacion">
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#pedidos">Pedidos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+ 
+
+<section id="inicio" class="bienvenida">
+    <h1>Bienvenido a Café Aurora </h1>
+
+    <h2>Cada taza cuenta una historia</h2>
+
+    <p>
+        Disfruta nuestros cafés, bebidas y postres
+        preparados para acompañar tus mejores momentos.
+    </p>
+
+    <a href="#menu" class="boton-menu">
+        Explorar nuestro menú
+    </a>
+</section>
+
+<h2 id="menu">Nuestro menú</h2>
+
+    <div class="menu">
+        <!-- Tarjeta 1: Café americano -->
+        <div class="tarjeta">
+            <img src="imagenes/americano.jpg" alt="Café americano" class="imagen-producto">
+            <h3>Café americano</h3>
+            <p>Un café clásico y delicioso.</p>
+            <p class="precio">$35</p>
+        </div>
+
+        <!-- Tarjeta 2: Capuchino -->
+        <div class="tarjeta">
+            <img src="imagenes/Capuchino.jpg" alt="Capuchino" class="imagen-producto">
+            <h3>Capuchino</h3>
+            <p>Una mezcla suave y cremosa.</p>
+            <p class="precio">$50</p>
+        </div>
+
+        <!-- Tarjeta 3: Chocolate caliente -->
+        <div class="tarjeta">
+            <img src="imagenes/chocolate caliente.jpg" alt="Chocolate caliente" class="imagen-producto">
+            <h3>Chocolate caliente</h3>
+            <p>Perfecto para cualquier momento.</p>
+            <p class="precio">$45</p>
+        </div>
+
+        <!-- Tarjeta 4: Roll de canela -->
+        <div class="tarjeta">
+            <img src="imagenes/Roll de canela.jpg" alt="Roll de canela" class="imagen-producto">
+            <h3>Roll de canela</h3>
+            <p>Suave, dulce y recién horneado.</p>
+            <p class="precio">$40</p>
+        </div>
+    </div>
+
+    <h2>Horario</h2>
+    <p>Lunes a sábado, de 8:00 a 20:00</p>
+
+<button type="button" onclick="mostrarPromocion()">Conoce nuestras promociones</button>
+
+<h2>Realiza tu pedido</h2>
+
+<p>Selecciona tu producto favorito:</p>
+
+<select id="producto">
+    <option value="35">Café americano - $35</option>
+    <option value="50">Capuchino - $50</option>
+    <option value="45">Chocolate caliente - $45</option>
+    <option value="40">Roll de canela - $40</option>
+</select>
+
+<button type="button" onclick="realizarPedido()">
+    Realizar pedido
+</button>
+
+
+<p id="resultado"></p>
+
+<h2 id="pedidos"> Tu carrito de compras</h2>
+
+<ul id="listaCarrito"></ul>
+<p id="cantidadCarrito">Productos en el carrito: 0</p>
+<p id="totalCarrito">Total: $0</p>
+
+
+<button type="button" onclick="vaciarCarrito()">
+    Vaciar carrito
+</button>
+
+<button type="button" onclick="confirmarPedido()">
+    Confirmar compra
+</button>
+
+<section id="contacto" class="contacto">
+    <h2>Contáctanos </h2>
+
+    <p>¿Tienes alguna pregunta? ¡Estamos para ayudarte!</p>
+
+    <p> Ubicación: Puebla, México</p>
+
+    <p> Correo: contacto@cafeaurora.com</p>
+
+    <p> Teléfono: 222 000 0000</p>
+
+    <p>¡Gracias por elegir Café Aurora!</p>
+    
+<h3>Envíanos un mensaje</h3>
+
+<form id="formularioContacto">
+    <label for="nombre">Tu nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Tu correo electrónico:</label>
+    <input type="email" id="correo" required>
+
+    <label for="mensaje">Tu mensaje:</label>
+    <textarea id="mensaje" rows="4" required></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+</form>
+
+    <p id="respuestaContacto"></p>
+
+</section>
+
+<footer class="pie-pagina">
+    <h3> Café Aurora</h3>
+
+    <p>Cada taza cuenta una historia.</p>
+
+    <div class="enlaces-footer">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <hr>
+
+    <p class="derechos">
+        © 2026 Café Aurora.
+        Todos los derechos reservados.
+    </p>
+</footer>
+<p class="derechos">
+    Sitio web de demostración.
+    No se realizan compras ni envíos de mensajes reales.
+    Datos de contacto ficticios.
+</p>
+<script src="script.js"></script>
+
+</body>
+</html>

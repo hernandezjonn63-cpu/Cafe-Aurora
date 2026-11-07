@@ -1,0 +1,314 @@
+body {
+    background-color: #EAE3D2; /* Color de fondo general de la página */
+    font-family: Arial, sans-serif;
+    color: #4E342E;
+}
+
+h1 {
+    color: #6F4E37;
+    text-align: center;
+    font-size: 50px; 
+}
+
+h2 {
+    color: #8B5E3C;
+}
+
+
+button {
+    background-color: #D97706;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #B85C00;
+    transform: scale(1.05);
+}
+
+
+/* Contenedor principal del menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Cambiado de 20px a 30px */
+}
+
+/* Diseño de cada tarjeta */
+.tarjeta {
+    background-color: #FDFBF7; /* Cambiado a un tono crema muy claro */
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px; /* Cambiado de 220px a 250px */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tarjeta {
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+/* Títulos de los productos */
+.tarjeta h3 {
+    color: #6F4E37;
+}
+
+/* Precios */
+.precio {
+    color: #D97706;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Diseño adaptable para celulares */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+/* Barra de navegación */
+.navegacion {
+    background-color: #6F4E37;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+/* Enlaces de navegación */
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.navegacion a:hover {
+    color: #FFD699;
+}
+
+/* Desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    .navegacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Sección de contacto */
+.contacto {
+    background-color: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+/* Título de contacto */
+.contacto h2 {
+    color: #FFD699;
+    font-size: 30px;
+}
+
+/* Información de contacto */
+.contacto p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Formulario de contacto */
+#formularioContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+#formularioContacto label {
+    text-align: left;
+    font-weight: bold;
+}
+
+#formularioContacto input,
+#formularioContacto textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#formularioContacto button {
+    margin-top: 10px;
+}
+
+#respuestaContacto {
+    color: #FFD699;
+    font-weight: bold;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    background: linear-gradient(
+        135deg,
+        #493126,
+        #8B5E3C
+    );
+
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: white;
+}
+
+/* Título principal */
+.bienvenida h1 {
+    color: white;
+    font-size: 45px;
+}
+
+/* Subtítulo */
+.bienvenida h2 {
+    color: #FFD699;
+    font-size: 28px;
+}
+
+/* Descripción */
+.bienvenida p {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+
+/* Botón para explorar el menú */
+.boton-menu {
+    display: inline-block;
+    background-color: #D97706;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.boton-menu:hover {
+    background-color: #B85C00;
+    transform: scale(1.05);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .bienvenida {
+        padding: 40px 15px;
+    }
+
+    .bienvenida h1 {
+        font-size: 30px;
+    }
+
+    .bienvenida h2 {
+        font-size: 23px;
+    }
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #493126;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* Nombre de la cafetería */
+.pie-pagina h3 {
+    color: #FFD699;
+    font-size: 25px;
+}
+
+/* Enlaces */
+.enlaces-footer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.enlaces-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlaces-footer a:hover {
+    color: #FFD699;
+}
+
+/* Línea divisoria */
+.pie-pagina hr {
+    border: none;
+    border-top: 1px solid #8B5E3C;
+    margin: 20px 0;
+}
+
+/* Derechos de autor */
+.derechos {
+    font-size: 14px;
+    opacity: 0.8;
+}
