@@ -44,7 +44,7 @@
 
         <!-- Tarjeta 2: Capuchino -->
         <div class="tarjeta">
-            <img src="imagenes/capuchino.jpg" alt="Capuchino" class="imagen-producto">
+            <img src="imagenes/Capuchino.jpg" alt="Capuchino" class="imagen-producto">
             <h3>Capuchino</h3>
             <p>Una mezcla suave y cremosa.</p>
             <p class="precio">$50</p>
@@ -87,7 +87,6 @@
     Realizar pedido
 </button>
 
-
 <p id="resultado"></p>
 
 <h2 id="pedidos"> Tu carrito de compras</h2>
@@ -95,7 +94,6 @@
 <ul id="listaCarrito"></ul>
 <p id="cantidadCarrito">Productos en el carrito: 0</p>
 <p id="totalCarrito">Total: $0</p>
-
 
 <button type="button" onclick="vaciarCarrito()">
     Vaciar carrito
@@ -160,6 +158,22 @@
     No se realizan compras ni envíos de mensajes reales.
     Datos de contacto ficticios.
 </p>
+<!-- Ventana de notificaciones personalizada -->
+<div id="ventanaMensaje" class="ventana-fondo">
+
+    <div class="ventana-contenido">
+
+        <h2 id="tituloMensaje">Café Aurora</h2>
+
+        <p id="textoMensaje"></p>
+
+        <button type="button" onclick="cerrarMensaje()">
+            Aceptar
+        </button>
+
+    </div>
+
+</div>
 <script src="script.js"></script>
 
 </body>

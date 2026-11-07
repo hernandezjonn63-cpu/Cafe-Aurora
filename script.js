@@ -1,6 +1,9 @@
 
 function mostrarPromocion() {
-    alert("¡Bienvenido a Café Aurora!  Hoy tenemos un 20% de descuento.");
+    mostrarMensaje(
+        "Promociones de Café Aurora ",
+        "¡Bienvenido a Café Aurora! Hoy tenemos un 20% de descuento."
+    );
 }
 
 function realizarPedido() {
@@ -86,13 +89,19 @@ function vaciarCarrito() {
 
 function confirmarPedido() {
     if (carrito.length === 0) {
-        alert("Tu carrito está vacío. Agrega productos primero.");
+        mostrarMensaje(
+            "Carrito vacío",
+            "Tu carrito está vacío. Agrega productos primero."
+        );
         return;
     }
 
-    alert("¡Gracias por tu compra en Café Aurora! \n" +
-          "Productos: " + carrito.length + "\n" +
-          "Total: $" + total);
+    mostrarMensaje(
+        "¡Pedido de prueba confirmado! ",
+        "Productos: " + carrito.length +
+        "\nTotal: $" + total +
+        "\nEsta es una demostración. No se realizó ningún pago."
+    );
 
     vaciarCarrito();
 }
@@ -114,3 +123,15 @@ formularioContacto.addEventListener("submit", function(evento) {
     formularioContacto.reset();
 });
 mostrarCarrito();
+function mostrarMensaje(titulo, mensaje) {
+    let ventana = document.getElementById("ventanaMensaje");
+
+    document.getElementById("tituloMensaje").textContent = titulo;
+    document.getElementById("textoMensaje").textContent = mensaje;
+
+    ventana.style.display = "flex";
+}
+
+function cerrarMensaje() {
+    document.getElementById("ventanaMensaje").style.display = "none";
+}
